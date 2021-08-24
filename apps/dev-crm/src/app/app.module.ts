@@ -6,7 +6,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { UiModule } from '@city/ui';
+import { IconsModule, UiModule } from '@city/ui';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +18,7 @@ import { UiModule } from '@city/ui';
     }),
     AppRoutingModule,
     UiModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

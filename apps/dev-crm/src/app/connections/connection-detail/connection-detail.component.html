@@ -1,0 +1,80 @@
+<div class="p-4">
+  <div class="flex justify-between w-full pb-8">
+    <p class="text-4xl">Billy</p>
+    <button class="hover:bg-gray-200 rounded-full w-10 h-10">
+      <i-feather name="edit-3"></i-feather>
+    </button>
+  </div>
+
+  <div>
+    <p>Basic Info</p>
+
+    <hr />
+    <div class="pt-4 flex gap-6 items-center">
+      <city-text-input label="First name"></city-text-input>
+      <city-text-input label="Last name" placeholder=""></city-text-input>
+      <city-checkbox
+        [inline]="true"
+        label="Display another name"
+      ></city-checkbox>
+      <city-text-input label="Display name"></city-text-input>
+    </div>
+
+    <div class="pt-4 flex gap-6 items-center">
+      <div class="relative">
+        <!-- <label class="block">
+          <span class="text-gray-700">Pronouns</span>
+          <input
+            type="text"
+            class="form-input mt-1 block w-full"
+            placeholder="They/them/theirs"
+            (focus)="focused = true"
+            (blur)="focused = false"
+          />
+        </label> -->
+        <city-text-input label="Pronouns" #pronounsInput></city-text-input>
+        <ul
+          class="border border-gray-100 w-full z-10 absolute bg-white shadow-lg"
+          *ngIf="pronounsInput.focused"
+        >
+          <li
+            class="
+              pl-2
+              py-2
+              border-b-2 border-gray-100
+              relative
+              cursor-pointer
+              hover:text-black
+            "
+          >
+            He/him/his
+          </li>
+          <li
+            class="
+              pl-2
+              py-2
+              border-b-2 border-gray-100
+              relative
+              cursor-pointer
+              hover:text-black
+            "
+          >
+            She/her/hers
+          </li>
+          <li
+            class="
+              pl-2
+              py-2
+              border-b-2 border-gray-100
+              relative
+              cursor-pointer
+              hover:text-black
+            "
+          >
+            They/them/theirs
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

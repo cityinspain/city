@@ -33,6 +33,12 @@
     "dev-crm-e2e": {
       "tags": [],
       "implicitDependencies": ["dev-crm"]
+    },
+    "types": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

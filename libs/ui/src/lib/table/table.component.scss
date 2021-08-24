@@ -1,0 +1,11 @@
+th {
+  @apply border border-gray-400 text-left p-2 font-semibold;
+}
+
+td {
+  @apply border border-gray-400 p-2;
+}
+
+a {
+  @apply underline;
+}
