@@ -1,0 +1,82 @@
+<div class="flex flex-col max-h-screen p-4 pt-0">
+  <div
+    class="h-16 flex w-full flex-shrink-0 flex-row items-center justify-between"
+  >
+    <div class="inline-flex">
+      <button
+        [ngClass]="{
+          'bg-gray-300': view === 'week',
+          'border-2 border-gray-300': view !== 'week'
+        }"
+        (click)="setCalendarView('week')"
+        class="hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+      >
+        Week
+      </button>
+      <button
+        [ngClass]="{
+          'bg-gray-300 border': view === 'month',
+          'border-2 border-gray-300': view !== 'month'
+        }"
+        (click)="setCalendarView('month')"
+        class="hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+      >
+        Month
+      </button>
+    </div>
+    <div class="inline-flex">
+      <button
+        class="
+          bg-gray-300
+          hover:bg-gray-400
+          text-gray-800
+          font-bold
+          py-2
+          px-4
+          rounded-l
+        "
+      >
+        Prev
+      </button>
+      <button
+        class="
+          bg-gray-300
+          hover:bg-gray-400
+          text-gray-800
+          font-bold
+          py-2
+          px-4
+          rounded-r
+        "
+      >
+        Next
+      </button>
+    </div>
+  </div>
+  <div class="overflow-y-auto">
+    <ng-template #loading>
+      <div class="text-center">
+        <i class="fas fa-spin fa-spinner fa-5x"></i> <br />
+        Loading events...
+      </div>
+    </ng-template>
+    <div *ngIf="events$ | async; else loading; let events">
+      <div [ngSwitch]="view">
+        <mwl-calendar-month-view
+          *ngSwitchCase="'month'"
+          [viewDate]="viewDate"
+          [events]="events"
+        >
+        </mwl-calendar-month-view>
+        <mwl-calendar-week-view
+          *ngSwitchCase="'week'"
+          [viewDate]="viewDate"
+          [events]="events"
+        >
+        </mwl-calendar-week-view>
+        <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate">
+        </mwl-calendar-day-view>
+      </div>
+    </div>
+  </div>
+</div>
