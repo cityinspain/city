@@ -9,10 +9,29 @@ import { PeopleTableComponent } from './people-table/people-table.component';
 import { PillComponent } from './pill/pill.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
-  declarations: [SidenavItemComponent, SidenavDropdownComponent, SidenavComponent, TableComponent, PeopleTableComponent, PillComponent, TextInputComponent, CheckboxComponent],
-  exports: [SidenavItemComponent, SidenavDropdownComponent, SidenavComponent, TableComponent, PeopleTableComponent, PillComponent, TextInputComponent, CheckboxComponent],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, FormsModule],
+  declarations: [
+    SidenavItemComponent,
+    SidenavDropdownComponent,
+    SidenavComponent,
+    TableComponent,
+    PeopleTableComponent,
+    PillComponent,
+    TextInputComponent,
+    CheckboxComponent,
+  ],
+  exports: [
+    SidenavItemComponent,
+    SidenavDropdownComponent,
+    SidenavComponent,
+    TableComponent,
+    PeopleTableComponent,
+    PillComponent,
+    TextInputComponent,
+    CheckboxComponent,
+  ],
 })
 export class UiModule {}

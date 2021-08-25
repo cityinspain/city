@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'city-connection-detail',
@@ -6,10 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./connection-detail.component.scss'],
 })
 export class ConnectionDetailComponent implements OnInit {
+  test = new FormControl('foo');
+
   @Input() connectionId: number;
   focused = false;
 
-  constructor() {}
+  constructor() {
+    this.test.valueChanges.subscribe((res) => console.log('change: ', res));
+  }
 
   ngOnInit(): void {}
 }

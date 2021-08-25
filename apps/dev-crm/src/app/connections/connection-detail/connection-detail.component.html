@@ -11,8 +11,11 @@
 
     <hr />
     <div class="pt-4 flex gap-6 items-center">
-      <city-text-input label="First name"></city-text-input>
-      <city-text-input label="Last name" placeholder=""></city-text-input>
+      <city-text-input
+        label="First name"
+        [formControl]="test"
+      ></city-text-input>
+      <city-text-input label="Last name"></city-text-input>
       <city-checkbox
         [inline]="true"
         label="Display another name"
