@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { IconsModule, UiModule } from '@city/ui';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,7 @@ import { IconsModule, UiModule } from '@city/ui';
     }),
     AppRoutingModule,
     UiModule,
-    IconsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

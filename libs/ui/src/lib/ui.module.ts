@@ -7,8 +7,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { TableComponent } from './table/table.component';
 import { PeopleTableComponent } from './people-table/people-table.component';
 import { PillComponent } from './pill/pill.component';
-import { TextInputComponent } from './text-input/text-input.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { TextInputComponent } from './forms/text-input/text-input.component';
+import { CheckboxComponent } from './forms/checkbox/checkbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
